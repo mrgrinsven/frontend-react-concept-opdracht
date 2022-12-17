@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
+import './Post.css'
 const Post = ({title, redditLink, subreddit, subredditLink, comments, ups }) => {
     return (
         <article>

@@ -9,16 +9,16 @@ const Home = () => {
     const [posts, setPosts] = useState();
 
     const URI = 'https://www.reddit.com';
-    const HOT = '/hot.json'
+    const HOT = '/hot.json';
     const LIMIT = '?limit=15';
 
     useEffect(() => {
-        const controller = new AbortController();
+        const controllerHot = new AbortController();
 
         async function getPosts() {
             try {
                 const result = await axios.get(URI + HOT + LIMIT, {
-                    signal: controller.signal,
+                    signal: controllerHot.signal,
                 });
 
                 setPosts(result.data.data.children);
@@ -31,9 +31,8 @@ const Home = () => {
         getPosts();
 
         return function cleanup() {
-            controller.abort();
+            controllerHot.abort();
         }
-
     }, []);
 
     return (
