@@ -36,14 +36,15 @@ const Home = () => {
     }, []);
 
     return (
-        <>
-            <h1>HOME</h1>
+        <div className="inner-container hottest-posts">
+            <h2>Hottest posts</h2>
+            <h6>on Reddit right now</h6>
             {posts &&
-                <div>
+                <div className="article-container-hot">
                     {posts.map((post) => {
                         return (
                             <Post
-                                key={post.data.subreddit_id}
+                                key={post.data.permalink}
                                 title={post.data.title}
                                 redditLink={URI + post.data.permalink}
                                 subreddit={post.data.subreddit}
@@ -54,7 +55,7 @@ const Home = () => {
                         );
                     })}
                 </div>}
-        </>
+        </div>
     );
 };
 

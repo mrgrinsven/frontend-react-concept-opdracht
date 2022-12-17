@@ -37,18 +37,19 @@ const Subreddit = () => {
 
     return (
         <>
-            <h1>SUBREDDIT</h1>
-            {subredditSpecs &&
-                <article>
-                    <h3>Title</h3>
-                    <p>{subredditSpecs.title}</p>
-                    <h3>Description</h3>
-                    <p>{subredditSpecs.public_description}</p>
-                    <h3>Number of subscribers</h3>
-                    <p>{subredditSpecs.subscribers}</p>
-                    <Link to="/">{'< Take me back'}</Link>
-                </article>
-            }
+            <div className="inner-container subreddit-container">
+                {subredditSpecs &&
+                    <article className="article-container-subreddit">
+                        <h3 className="text-spacing">Title</h3>
+                        <p className="text-spacing subreddit-text">{subredditSpecs.title}</p>
+                        <h3 className="text-spacing">Description</h3>
+                        <p className="text-spacing subreddit-text">{subredditSpecs.public_description}</p>
+                        <h3 className="text-spacing">Number of subscribers</h3>
+                        <p className="text-spacing subreddit-text">{subredditSpecs.subscribers}</p>
+                    </article>
+                }
+                <Link className="take-me-back" to="/">{'< Take me back'}</Link>
+            </div>
         </>
     );
 }

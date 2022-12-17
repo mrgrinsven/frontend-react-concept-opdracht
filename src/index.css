@@ -14,7 +14,8 @@
   --orange-color: #e7613a;
   --light-orange-color: #FDF4F2;
   --white-color: #FFFFFF;
-  --basic-text-color: #292929;
+  --black-color: #292929;
+  --header-gradient: linear-gradient(90deg, rgba(231,97,58,1) 0%, rgba(221,48,56,1) 100%);
 
   /* ----- Fonts ----- */
   --fallback-fonts: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -30,7 +31,8 @@
 
 body {
   font-family: var(--basic-text-font), var(--fallback-fonts);
-  color: var(--basic-text-color)
+  font-size: 1.4rem;
+  color: var(--black-color)
 }
 
 h1, h2, h3,
@@ -40,4 +42,17 @@ h4, h5, h6 {
 
 code {
   font-family: var(--code-fonts);
+}
+
+/* ------------------------------- 3. Layout --------------------------------------- */
+
+.outer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-width: 360px;
+}
+
+.inner-container {
+  width: 1280px;
 }

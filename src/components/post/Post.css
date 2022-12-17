@@ -1,0 +1,40 @@
+.post {
+    background-color: var(--white-color);
+    width: 400px;
+    min-height: 200px;
+    text-align: left;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow:  0px 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bottom-container {
+    margin: 20px 0 0 0;
+}
+.foot {
+    font-weight: 300;
+}
+
+.article-title {
+    color: var(--black-color);
+    text-decoration: none;
+}
+
+.article-title {
+    cursor: pointer;
+}
+
+.subreddit-link {
+    color: var(--red-color);
+    font-weight: 600;
+}
+
+.subreddit-link:hover {
+    cursor: pointer;
+}
+
+.subreddit-link:visited {
+    color: var(--orange-color);
+}
