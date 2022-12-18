@@ -4,7 +4,7 @@ import {Link, useParams} from 'react-router-dom';
 
 import './Subreddit.css';
 
-const Subreddit = () => {
+const Subreddit = ({setSubredditState}) => {
     const [subredditSpecs, setSubredditSpecs] = useState()
     const {subredditId} = useParams();
 
@@ -22,6 +22,8 @@ const Subreddit = () => {
                 });
 
                 setSubredditSpecs(resultSubreddit.data.data);
+                setSubredditState(resultSubreddit.data.data.display_name_prefixed);
+                document.title = resultSubreddit.data.data.title
 
             } catch (error) {
                 console.error(error)
@@ -32,6 +34,7 @@ const Subreddit = () => {
 
         return function cleanup() {
             controllerSubreddit.abort();
+            setSubredditState()
         }
     }, [SUBREDDIT]);
 

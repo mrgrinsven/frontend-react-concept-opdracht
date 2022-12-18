@@ -6,6 +6,8 @@ import './Home.css';
 import Post from '../../components/post/Post';
 
 const Home = () => {
+    document.title = 'Hottest posts'
+
     const [posts, setPosts] = useState();
 
     const URI = 'https://www.reddit.com';
@@ -14,6 +16,7 @@ const Home = () => {
 
     useEffect(() => {
         const controllerHot = new AbortController();
+
 
         async function getPosts() {
             try {
