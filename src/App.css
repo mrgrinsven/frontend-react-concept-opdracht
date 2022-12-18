@@ -1,0 +1,12 @@
+header {
+    background-color: var(--red-color);
+    background: var(--header-gradient);
+}
+
+main {
+    background-color: var(--light-orange-color);
+}
+
+footer {
+    background-color: var(--black-color);
+}

@@ -1,0 +1,15 @@
+.header-container {
+    height: 400px;
+
+}
+.header-text {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.reddit-logo {
+    width: 200px;
+}

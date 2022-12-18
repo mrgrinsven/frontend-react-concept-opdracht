@@ -1,0 +1,21 @@
+.subreddit-container {
+    margin: 120px 20px 120px 20px;
+}
+.article-container-subreddit {
+    margin: 0 0 120px 0;
+}
+
+.text-spacing {
+    margin: 10px 0 10px 0;
+}
+
+.subreddit-text {
+    font-weight: 300;
+}
+
+.take-me-back {
+    color: var(--red-color);
+    font-weight: 600;
+}
+
+
