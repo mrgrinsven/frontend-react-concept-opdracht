@@ -6,6 +6,7 @@ import './App.css';
 import Home from './pages/home/Home';
 import Subreddit from './pages/subreddit/Subreddit'
 import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
                 </Routes>
             </main>
             <footer className="outer-container">
-                <div className="inner-container">In opdracht van NOVI Hogeschool © 2022</div>
+                <Footer/>
             </footer>
         </>
     );

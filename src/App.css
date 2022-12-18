@@ -8,13 +8,5 @@ main {
 }
 
 footer {
-    color: var(--white-color);
     background-color: var(--black-color);
-    text-align: center;
-    font-weight: 300;
-    font-size: small;
-    height: 40px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 }
