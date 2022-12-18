@@ -10,7 +10,7 @@ import Footer from './components/footer/Footer';
 
 
 function App() {
-    const [subreddit, setSubreddit] = useState()
+    const [subreddit, setSubreddit] = useState();
     return (
         <>
             <header className="outer-container">
