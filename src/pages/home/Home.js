@@ -4,6 +4,8 @@ import axios from 'axios';
 import './Home.css';
 
 import Post from '../../components/post/Post';
+import stringLimiter from '../../helpers/stringLimiter';
+import thousandsSeperator from '../../helpers/thousandsSeperator';
 
 const Home = () => {
     document.title = 'Hottest posts'
@@ -47,12 +49,12 @@ const Home = () => {
                         return (
                             <Post
                                 key={post.data.permalink}
-                                title={post.data.title}
+                                title={stringLimiter(post.data.title)}
                                 redditLink={URI + post.data.permalink}
                                 subreddit={post.data.subreddit}
                                 subredditLink={post.data.subreddit_name_prefixed}
-                                comments={post.data.num_comments}
-                                ups={post.data.ups}
+                                comments={thousandsSeperator(post.data.num_comments)}
+                                ups={thousandsSeperator(post.data.ups)}
                             />
                         );
                     })}

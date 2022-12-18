@@ -4,6 +4,8 @@ import {Link, useParams} from 'react-router-dom';
 
 import './Subreddit.css';
 
+import thousandsSeperator from '../../helpers/thousandsSeperator';
+
 const Subreddit = ({setSubredditState}) => {
     const [subredditSpecs, setSubredditSpecs] = useState()
     const {subredditId} = useParams();
@@ -36,7 +38,7 @@ const Subreddit = ({setSubredditState}) => {
             controllerSubreddit.abort();
             setSubredditState()
         }
-    }, [SUBREDDIT]);
+    }, [SUBREDDIT, setSubredditState]);
 
     return (
         <>
@@ -48,7 +50,7 @@ const Subreddit = ({setSubredditState}) => {
                         <h3 className="text-spacing">Description</h3>
                         <p className="text-spacing subreddit-text">{subredditSpecs.public_description}</p>
                         <h3 className="text-spacing">Number of subscribers</h3>
-                        <p className="text-spacing subreddit-text">{subredditSpecs.subscribers}</p>
+                        <p className="text-spacing subreddit-text">{thousandsSeperator(subredditSpecs.subscribers)}</p>
                     </article>
                 }
                 <Link className="take-me-back" to="/">{'< Take me back'}</Link>
