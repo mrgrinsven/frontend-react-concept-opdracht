@@ -2,7 +2,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 import './Post.css'
-const Post = ({title, redditLink, subreddit, subredditLink, comments, ups }) => {
+
+const Post = ({title, redditLink, subreddit, subredditLink, comments, ups}) => {
     return (
         <article className="post">
             <h3><a className="article-title" href={redditLink}>{title}</a></h3>

@@ -1,12 +1,13 @@
 .header-container {
     height: 400px;
+
+}
+.header-text {
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.subreddit-header-title {
-
 }
 
 .reddit-logo {

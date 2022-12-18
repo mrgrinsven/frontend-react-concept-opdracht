@@ -17,7 +17,6 @@ const Home = () => {
     useEffect(() => {
         const controllerHot = new AbortController();
 
-
         async function getPosts() {
             try {
                 const result = await axios.get(URI + HOT + LIMIT, {

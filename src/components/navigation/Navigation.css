@@ -1,0 +1,21 @@
+nav {
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 40px;
+}
+
+.nav-link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 1rem;
+    font-weight: 600;
+}
